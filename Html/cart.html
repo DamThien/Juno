@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="https://file.hstatic.net/1000003969/file/favicon-juno_8afc5c05a55941aa88438ce9264f03f3.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>JUNO - Giỏ hàng</title>
+    <link rel="stylesheet" href="../Css/cart.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu-bar" id="menu">
+            <!-- <a class="navbar-brand anhhh">
+            <img src="https://gigamall.com.vn/data/2019/09/20/17074742_LOGO-JUNO-500x500.jpg" alt="logo" style="width:50px;">
+        </a> -->
+            <ul class="active">
+                <li>
+                    <a href="../Home.html" class="navbar-brand anhhh">
+                        <img id="img" src="https://gigamall.com.vn/data/2019/09/20/17074742_LOGO-JUNO-500x500.jpg" alt="logo" style="width:60px;">
+                    </a>
+                </li>
+                <li>
+                    <a href="Home.html">TRANG CHỦ</a>
+                </li>
+                <li>
+                    <a href="">HÀNG MỚI</a>
+                </li>
+                <li>
+                    <a href="product.html">SẢN PHẨM </a>
+                </li>
+                <li>
+                    <a href="">UNSTOPPABLEW YEAR</a>
+                </li>
+                <li>
+                    <a href="">SHOWROOM</a>
+                </li>
+                <li>
+                    <div class="row">
+                        <button type="button" class="btn" id="icons" data-toggle="modal" data-target="#myModal">
+                        <i class="fas fa-search"></i> |
+                    </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-contents">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h2 style="color: rgb(90, 74, 5);">Tìm kiếm trong tài khoản NEM fashion </h2>
+                                    <form action="">
+
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" style="width:50%px" placeholder="Bắt đầu tìm kiếm...">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-dark" type="button"><i
+                                                    class="fas fa-search"></i> 
+                                            </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <button type="button" class="btn " id="icons" data-toggle="modal" data-target=".bg-example-modal-lg">
+                        <i class="fas fa-user-circle"></i> Đăng nhập |
+                    </button>
+
+                        <div class="modal fade bg-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-5 col-lg-5 block-image">
+                                                <img src="https://image.shutterstock.com/image-vector/contact-icon-vector-triangulation-art-260nw-1741357919.jpg" alt="" class="img-responsive">
+                                            </div>
+                                            <div class="col-md-6 col-lg-6 block-contact">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <form action="">
+                                                    <h2 style="color: rgb(90, 74, 5);">TRANG TÀI KHOẢN CỦA JUNO FASHION
+                                                    </h2>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" id="login" placeholder="Tên đăng nhập hoặc email">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" id="matkhau" placeholder="Mật khẩu">
+                                                    </div>
+
+                                                    <button type="button" class="btn btn-primary btn-block" onclick="Login()">Đăng nhập</button>
+                                                    <br>
+                                                    <p class="lost">
+                                                        <a href="#" style="color: black"> <a class="text-center" href="dangky.html" id="a1">Đăng kí tài khoản mới</a></a>
+                                                    </p>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="./cart.html " style="color: black;"> <i class="fas fa-shopping-bag"></i> Giỏ hàng</a>
+                </li>
+            </ul>
+        </div>
+        <div class="cart1" id="cart1">
+            <table class="table">
+                <thead class="title">
+                    <tr>
+                        <th scope="col">STT</th>
+                        <th scope="col">Tên Sản Phẩm</th>
+                        <th scope="col">Hình ảnh</th>
+                        <th scope="col">Giá</th>
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Tổng tiền</th>
+                        <th scope="col">Chỉnh sửa</th>
+                    </tr>
+                </thead>
+                <tbody id='tbl'>
+                </tbody>
+            </table>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th id="total" scope="col">Tổng tiền</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col" id='tien'>0</th>
+                    </tr>
+                </thead>
+
+            </table>
+
+            <div class="row">
+                <div class="col-7 ml-5">
+                    <button class="btn1"><a href="product.html">Trang sản phẩm</a></button>
+                </div>
+                <div class="col-2 mr-1">
+                    <button class="btn1" onclick="thanhtoan()">Tiến hành thanh toán</button>
+                </div>
+            </div>
+        </div>
+        <div class="container pag3">
+            <div class="row bill" style="margin: 20px; ">
+                <div class="col-md-4">
+
+                    <form>
+
+                        <br/>
+                        <label class="title2">1: Thông tin khách hàng</label><br/>
+                        <br/>
+                        <input class="form-control" type="text" name="fullname" id="fn" required placeholder="Mời bạn nhập tên">
+                        <br/>
+
+                        <input class="form-control" type="text" name="phonenumber" id="dt" required placeholder="Nhập số điện thoại của bạn">
+                        <br/>
+                        <input class="form-control" type="text" name="add_address" id="dc" required placeholder="Nhập địa chỉ của bạn">
+                        <br/>
+                    </form>
+                </div>
+
+                <div class="col-md-4">
+                    <form>
+                        <br/>
+                        <label class="title2">2: Chọn hình thức thanh toán</label>
+                        <br/>
+                        <br/>
+                        <select class="form-control" id="exampleFormControlSelect">
+                          <option value="Tiền mặt">Tiền mặt</option>
+                          <option value="Thanh toán trực tuyến">Thanh toán trực tuyến</option>
+                          <option value="Ngân hàng nội địa">Ngân hàng nội địa</option>
+                      </select>
+
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <br/>
+                    <label class="title2">3: Xem lại đơn hàng</label>
+                    <table class="table content">
+                        <tbody>
+                            <tr>
+                                <td>Ngày đặt hàng</td>
+                                <td id="Date"></td>
+
+                            </tr>
+                            <tr>
+                                <td>Tên Sản Phẩm</td>
+                                <td id="nameProduct"></td>
+
+                            </tr>
+                            <tr>
+                                <td>Tổng cộng</td>
+                                <td id="sumtotal"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal1" id="btn3" onclick="checktt(abc())">Giao Hàng</button>
+                </div>
+            </div>
+        </div>
+        <div class="pag4">
+            <div class="content">
+                <h1>THÔNG TIN ĐƠN HÀNG</h1>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" id='name'></th>
+                    </tr>
+                    <tr>
+                        <th scope="col" id='adress'></th>
+                    </tr>
+                    <tr>
+                        <th scope="col" id='phone'></th>
+                    </tr>
+                    <tr>
+                        <th scope="col" id='thanhtoan'></th>
+                    </tr>
+                    <tr>
+                        <th scope="col" id='tongtienthanhtoan'></th>
+                    </tr>
+
+
+                </thead>
+            </table>
+            <button onclick="dathang()">Xác nhận đơn hàng</button>
+
+        </div>
+        <div id="exampleModal1" class="modal" style="width: 50%; margin-left: 27%;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+            <div class="modal-content ">
+                <div class="canthongtin" style="margin-left: 5%;">
+                    <form>
+
+                        <br/>
+                        <label class="title2"> Thông tin khách hàng</label><br/>
+                        <br/>
+                        <p id="ten"></p>
+                        <br/>
+
+                        <p id="sodienthoai"></p>
+                        <br/>
+                        <p id='diachi'></p>
+                        <br/>
+                    </form>
+                    <label class="title2">Phương thức thanh toán</label>
+                    <p id="phuongthucthanhtoan">
+                    </p>
+                    <label class="title2" style="margin-left: 35%;">Đơn hàng của bạn</label>
+
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Tên sản phẩm</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                            <th>Số tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody id="chitiethoadon"></tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Tổng tiền</th>
+                            <th></th>
+                            <th></th>
+                            <th id='tongtienbill'></th>
+                        </tr>
+                    </thead>
+                    <tbody id="chitiethoadon"></tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Lưu thay đổi</button>
+            </div>
+        </div>
+        <hr>
+        <div class="footer">
+            <div class="container">
+                <h4>JUNO- THỜI TRANG CÔNG SỞ</h4>
+                <div class="row">
+                    <div class="col-md-3">
+                        <p>Công ty TNHH Dịch vụ và Thương mại An Thành.</p>
+                        <p>Số ĐKKD 0107861393, Sở KHĐT Tp. Hà Nội cấp ngày 04/10/2017</p>
+                        <p>Địa chỉ: Phòng 1002, tầng 10, Tòa nhà NEM số 545 đường Nguyễn Văn Cừ, P. Gia Thụy, Q. Long Biên, Hà Nội</p>
+                        <p>Hotline: 024 3938 8512</p>
+                        <p>Email: nemcskh@stripe-vn.com</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p>
+                            <a href="#">Giới thiệu</a>
+                        </p>
+                        <p>
+                            <a href="# ">NEM's Blog</a>
+                        </p>
+                        <p>
+                            <a href="# ">Tuyển Dụng</a>
+                        </p>
+                        <p>
+                            <a href="# ">Hệ thống showroom</a>
+                        </p>
+                        <p>
+                            <a href="# ">Liên hệ</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 ">
+                        <p>
+                            <a href="# ">Chính sách giao nhận - vận chuyển</a>
+                        </p>
+                        <p>
+                            <a href="# ">Hướng dẫn thanh toán</a>
+                        </p>
+                        <p>
+                            <a href="# ">Tra cứu đơn hàng</a>
+                        </p>
+                        <p>
+                            <a href="# ">Hướng dẫn chọn size</a>
+                        </p>
+                        <p>
+                            <a href="# ">Quy định đơn hàng</a>
+                        </p>
+                        <p>
+                            <a href="# ">Quy định bảo hành và sửa chữa</a>
+                        </p>
+                        <p>
+                            <a href="# ">Khách hàng thân thiết</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 ">
+                        <p>
+                            <a href="# ">Phương thức thanh toán</a>
+                        </p>
+                        <div>
+                            <img src="https://theme.hstatic.net/200000182297/1000658038/14/image_method_3.png?v=1642 " alt="phương thức tt ">
+                        </div>
+                        <br>
+                        <div>
+                            <img src="https://theme.hstatic.net/200000182297/1000658038/14/bct.png?v=1642 " alt="logo " width="100px ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../Js/cart.js"></script>
+</body>
+
+</html>

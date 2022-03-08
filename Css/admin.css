@@ -1,0 +1,115 @@
+#thunho {
+    max-width: 400px;
+    height: 120px;
+}
+
+.form1 {
+    margin-left: 50px;
+}
+
+#update {
+    display: none;
+}
+
+.donhang {
+    display: none;
+}
+
+.admin_left {
+    width: 360px;
+    height: 969px;
+    left: 0;
+    background-color: rgb(235, 162, 140);
+    position: fixed;
+}
+
+.p_head a,
+.p_content p,
+.p_content a,
+.p_footer a {
+    color: white;
+}
+
+.p_head {
+    text-align: center;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.p_content {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.p_padding {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+:active.p_padding {
+    color: yellow;
+}
+
+.p_border {
+    border: 1px solid white;
+}
+
+.p_head>a {
+    text-decoration: none;
+}
+
+.p_footer {
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 100%;
+    margin-left: 180px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.p_footer>a>i {
+    padding-top: 15px;
+}
+
+.nen {
+    /* background-color: #E06666; */
+    display: none;
+}
+
+.khachhang {
+    display: none;
+}
+
+.bill {
+    display: none;
+}
+
+.thead-primary {
+    background-color: rgb(235, 162, 140);
+    color: white;
+}
+
+.finding {
+    position: relative;
+    background-color: rgb(235, 162, 140);
+    height: 60px;
+}
+
+.ss {
+    margin-top: 10px;
+}
+
+.form1 {
+    background-color: rgb(116, 49, 18);
+}
+
+#add,
+#update {
+    margin-left: 40%;
+    width: 150px;
+}

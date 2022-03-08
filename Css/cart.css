@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#kichthuoc {
+    max-width: 100px;
+}
+
+.pag3,
+.pag4 {
+    display: none;
+}
+
+.cart1 {
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+    background-color: #32a1d4;
+    color: white;
+}
+
+.btn1 {
+    width: 200px;
+    height: 40px;
+    background-color: #35839b;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn1 a {
+    color: white;
+}
+
+.del {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#btn3 {
+    Background-color: #0a2649;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #311a1a;
+}
+
+.title2 {
+    font-weight: bold;
+    color: black;
+}
+
+.bill {
+    background-color: #a5966e7e;
+}
+
+.content {
+    color: black;
+}
+
+.but1 {
+    margin-left: 5px;
+    background-color: #a78080;
+    color: white;
+}
+
+
+/* header */
+
+.menu-bar {
+    background: rgb(247, 245, 245);
+    text-align: center;
+}
+
+.menu-bar ul {
+    display: inline-flex;
+    list-style-type: none;
+    color: rgb(12, 0, 0);
+}
+
+.menu-bar ul li {
+    margin: 120px;
+    margin: 10px;
+    padding: auto;
+}
+
+.menu-3 {
+    margin: 120px;
+    margin: 10px;
+    padding: auto;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: rgb(12, 1, 1);
+}
+
+.active,
+.menu-bar ul li:hover {
+    background: rgba(182, 180, 180, 0);
+    border-radius: 3px;
+}
+
+.sub-menu-1 {
+    display: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    background: rgb(241, 243, 241);
+    margin-top: 15px;
+    margin-left: -15px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul {
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child {
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+    color: #5e1a04;
+}
+
+.fa-angle-right {
+    float: right;
+}
+
+.sub-menu-2 {
+    display: none;
+}
+
+.hover-me:hover .sub-menu-2 {
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background: rgb(241, 243, 241);
+    z-index: 1;
+}
+
+
+/*  */
+
+
+/* content */
+
+.content {
+    background: rgb(238, 231, 231) no-repeat !important;
+    background-size: cover;
+    height: 400px;
+    text-align: center;
+}
+
+.content h2 {
+    padding-top: 60px;
+}
+
+
+/* icons */
+
+#icons {
+    margin-top: -7px;
+}
+
+.paragraph p {
+    float: left;
+    color: black;
+    text-align: center;
+}

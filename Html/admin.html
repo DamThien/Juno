@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../Js/admin.js"></script>
+    <title>Trang Admin</title>
+    <link rel="stylesheet" href="../Css/admin.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col col-3">
+            <div class="admin_left">
+                <p class="p_head"><a href=""><i class="fas fa-seedling"></i>ADMIN</a></p>
+                <div class="p_content">
+                    <p class="p_border"></p>
+                    <p class="p_padding" onclick="show_Home_Page()"><i class="fas fa-house-damage"></i> Trang chủ</p>
+                    <p class="p_padding">Quản lý</p>
+                    <p class="p_padding" onclick="showCustommer()"><i class="fas fa-tasks"></i> Quản lý khách hàng</p>
+                    <p class="p_padding" onclick="GetData()"><i class="fas fa-table"></i> Quản lý sản phẩm</p>
+                    <p class="p_padding" onclick="showbill()"> <i class="fas fa-table"></i> Đơn hàng</p>
+                    <p class="p_border"></p>
+                </div>
+                <p class="p_footer"><a href=""><i class="fas fa-chevron-left"></i></a></p>
+            </div>
+        </div>
+        <div class="col col-9">
+            <div class="nen">
+                <div class="row finding">
+                    <div class="col-2 ss">
+
+                    </div>
+                    <div class="col-2 ss">
+                    </div>
+                    <div class="col-4 ss">
+                        <select name="" id="search" type="text" class="form-control">
+                            <option value="giay">Giày thời trang</option>
+                            <option value="tui">Túi</option>
+                            <option value="balo">Balo</option>
+                            <option value="ao">Áo thun</option>
+                            <option value="phukien">Phụ kiện</option>
+                        </select>
+
+                    </div>
+                    <div class="col-4 ss">
+                        <button onclick="search()" class="btn btn-outline-info">Search</button>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="form1 row">
+                    <div class="col-6">
+                        <label class="text-white font-weight-bold" for="">Tên sản phẩm:</label><br>
+                        <input type="text" type="text" class="form-control" id="product-name"><br><br>
+                    </div>
+                    <div class="col-6">
+                        <label class="text-white font-weight-bold" for="">Giá:</label><br>
+                        <input type="text" type="text" class="form-control" id="price"> <br>
+                    </div>
+                    <div class="col-6">
+                        <label class="text-white font-weight-bold" for="">HÌnh ảnh:</label><br>
+                        <input type="text" type="text" class="form-control" id="image"><br><br>
+                    </div>
+                    <div class="col-6">
+                        <label class="text-white font-weight-bold" for="">Loại:</label><br>
+                        <input type="text" type="text" class="form-control" id="type"><br><br>
+                    </div>
+                    <button id='add' onclick="add()" class="btn btn-outline-primary">Thêm</button>
+                    <button id='update' class="btn btn-danger" onclick="update(document.getElementById('update').value)">Lưu</button>
+                </div>
+                <br>
+                <br>
+                <table class="table">
+                    <thead class="thead-primary">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Tên sản phẩm</th>
+                            <th scope="col">Giá</th>
+                            <th scope="col">Hình ảnh</th>
+                            <th scope="col">Loại</th>
+                            <th scope="col">Chỉnh sửa</th>
+                        </tr>
+                    </thead>
+                    <tbody id='tbl'>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="khachhang">
+                <table class="table">
+                    <thead class="thead-primary">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Họ và tên</th>
+                            <th scope="col">Số điện thoại</th>
+                            <th scope="col"> Địa chỉ</th>
+                            <th scope="col"> Xem chi tiết đơn hàng</th>
+                        </tr>
+                    </thead>
+                    <tbody id='tbl1'>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="bill">
+                <table class="table">
+                    <thead class="thead-primary">
+                        <tr>
+                            <th scope="col">MaHD</th>
+                            <th scope="col">MaKH</th>
+                            <th scope="col">Ngày</th>
+                            <th scope="col">Chi tiết hóa đơn</th>
+                        </tr>
+                    </thead>
+                    <tbody id='tbl2'>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="exampleModal" class="modal">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-content">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Số thứ tự</th>
+                        <th>Ngày mua</th>
+                        <th>tên sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Số tiền</th>
+                    </tr>
+                </thead>
+                <tbody id="detailorder"></tbody>
+            </table>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th id="total" scope="col">Tổng tiền</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col" id='tien'>0</th>
+                    </tr>
+                </thead>
+
+            </table>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            <button type="button" class="btn btn-primary">Lưu thay đổi</button>
+        </div>
+    </div>
+    <div id="exampleModal1" class="modal">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-content">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Tên sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Số tiền</th>
+                    </tr>
+                </thead>
+                <tbody id="chitiethoadon"></tbody>
+            </table>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th id="total" scope="col">Tổng tiền</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col" id='tien1'>0</th>
+                    </tr>
+                </thead>
+
+            </table>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Lưu thay đổi</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

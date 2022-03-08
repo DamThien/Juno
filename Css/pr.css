@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.modal-contents {
+    margin-top: 100px;
+    text-align: center;
+    object-fit: cover;
+    border: 2px solid black;
+    background-image: linear-gradient( 135deg, #f5f2f7 10%, #f1edf0 100%);
+}
+
+.modal-content {
+    width: 90%;
+    margin: auto;
+}
+
+.block-image {
+    margin: 15px;
+}
+
+.checkbox,
+.lost {
+    text-align: left;
+}
+
+#nho {
+    text-align: center;
+}
+
+#detail {
+    display: none;
+}
+
+.carousel-item {
+    height: 100%;
+}
+
+.but2 {
+    margin-top: 4.5%;
+}
+
+.giohang {
+    margin-top: 1%;
+}
+
+.icon1 {
+    font-size: 25px;
+    color: black;
+}
+
+#login,
+#matkhau {
+    margin-left: 22px;
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.but3 {
+    margin-left: 174px;
+    width: 150px;
+    height: 40px;
+}
+
+#a1 {
+    margin-bottom: 15px;
+}
+
+.listmenu {
+    background-color: rgb(62, 179, 214);
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+    background-color: rgb(133, 72, 36);
+}
+
+#img1 {
+    max-width: 100%;
+    border-radius: 5%;
+    height: 150%;
+}
+
+.card-title {
+    height: 40px;
+}
+
+#cart {
+    width: 170px;
+    margin-left: 5px;
+}
+
+.box:hover {
+    border: 2px solid rgb(119, 148, 150);
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: #EFEFEF;
+}
+
+.foot {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#hr {
+    height: 10px;
+    background-color: black;
+}
+
+
+/* header */
+
+.header {
+    margin-top: 30px;
+}
+
+.kpn {
+    text-align: center;
+}
+
+.space {
+    height: 50px;
+}
+
+
+/*  */
+
+.card-title {
+    font-size: 15px;
+}
+
+.card {
+    margin: 20px;
+    height: 200px;
+}
+
+
+/* header */
+
+.menu-bar {
+    background: rgb(247, 245, 245);
+    text-align: center;
+}
+
+.menu-bar ul {
+    display: inline-flex;
+    list-style-type: none;
+    color: rgb(12, 0, 0);
+}
+
+.menu-bar ul li {
+    margin: 120px;
+    margin: 10px;
+    padding: auto;
+}
+
+.menu-3 {
+    margin: 120px;
+    margin: 10px;
+    padding: auto;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: rgb(12, 1, 1);
+}
+
+.active,
+.menu-bar ul li:hover {
+    background: rgba(182, 180, 180, 0);
+    border-radius: 3px;
+}
+
+.sub-menu-1 {
+    display: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    background: rgb(241, 243, 241);
+    margin-top: 15px;
+    margin-left: -15px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul {
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child {
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+    color: #5e1a04;
+}
+
+.fa-angle-right {
+    float: right;
+}
+
+.sub-menu-2 {
+    display: none;
+}
+
+.hover-me:hover .sub-menu-2 {
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background: rgb(241, 243, 241);
+    z-index: 1;
+}
+
+
+/*  */
+
+
+/* content */
+
+.content {
+    background: rgb(238, 231, 231) no-repeat !important;
+    background-size: cover;
+    height: 400px;
+    text-align: center;
+}
+
+.content h2 {
+    padding-top: 60px;
+}
+
+
+/* icons */
+
+#icons {
+    margin-top: -7px;
+}
+
+.paragraph p {
+    float: left;
+    color: black;
+    text-align: center;
+}
+
+
+/*  */
+
+#id {
+    margin-bottom: 10px;
+}
