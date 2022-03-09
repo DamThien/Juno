@@ -1,2 +1,2 @@
 # Juno
-This's first JS project
+This's my first JS project
